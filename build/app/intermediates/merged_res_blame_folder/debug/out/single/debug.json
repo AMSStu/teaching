@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/mipmap-xxhdpi_logo.jpg.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/mipmap-xxhdpi/logo.jpg"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/drawable_logo.jpg.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/drawable/logo.jpg"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/mipmap-xhdpi_logo.jpg.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/mipmap-xhdpi/logo.jpg"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/mipmap-mdpi_logo.jpg.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/mipmap-mdpi/logo.jpg"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/drawable-v21_launch_background.xml.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/drawable-v21/launch_background.xml"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/mipmap-xxxhdpi_logo.jpg.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/mipmap-xxxhdpi/logo.jpg"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/mipmap-hdpi_logo.jpg.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/mipmap-hdpi/logo.jpg"
+    },
+    {
+        "merged": "com.ams.co.ltd.teaching.app-merged_res-41:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.ams.co.ltd.teaching.app-main-36:/mipmap-xxxhdpi/ic_launcher.png"
+    }
+]
