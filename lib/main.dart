@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'widget_testing_page_1.dart';
 import 'widget_testing_page_2.dart';
-import 'widget_testing_page_3.dart';
 void main() {
   runApp(SignatureApp());
 }
 
 class SignatureApp extends StatelessWidget {
+  const SignatureApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
