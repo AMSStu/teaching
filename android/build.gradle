@@ -84,6 +84,26 @@
 
 // Root-level build.gradle file
 
+// plugins {
+//     id 'com.android.application' version '8.2.2' apply false // Add the plugin version here
+//     id 'org.jetbrains.kotlin.android' version '1.8.22' apply false
+// }
+
+// // Remove `buildscript` as previously discussed
+// rootProject.buildDir = "../build"
+
+// // Set build directory for all subprojects
+// subprojects {
+//     project.buildDir = "${rootProject.buildDir}/${project.name}"
+//     project.evaluationDependsOn(":app")
+// }
+
+// // Clean task
+// tasks.register("clean", Delete) {
+//     delete rootProject.buildDir
+// }
+
+
 plugins {
     id 'com.android.application' version '8.2.2' apply false // Add the plugin version here
     id 'org.jetbrains.kotlin.android' version '1.8.22' apply false
@@ -102,7 +122,6 @@ subprojects {
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
-
 
 
 
