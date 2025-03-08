@@ -54,23 +54,64 @@
 
 
 
+// plugins {
+//     id 'com.android.application'
+// }
+
+// android {
+//     namespace "com.example.app" // Change to your app's package name
+//     compileSdk 34  // Define compileSdk here
+
+//     defaultConfig {
+//         applicationId "com.example.app"
+//         minSdk 21
+//         targetSdk 34
+//         versionCode 1
+//         versionName "1.0"
+//     }
+
+//     buildToolsVersion "34.0.0" // Ensure this matches the latest version
+
+//     buildTypes {
+//         release {
+//             minifyEnabled false
+//             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//         }
+//     }
+// }
+
+// dependencies {
+//     implementation "androidx.core:core-ktx:1.12.0"
+//     implementation "androidx.appcompat:appcompat:1.6.1"
+//     implementation "com.google.android.material:material:1.11.0"
+// }
+
+
+
 plugins {
     id 'com.android.application'
+    id 'kotlin-android'
 }
 
 android {
-    namespace "com.example.app" // Change to your app's package name
-    compileSdk 34  // Define compileSdk here
-
+    compileSdkVersion 33 // or the latest available
     defaultConfig {
-        applicationId "com.example.app"
-        minSdk 21
-        targetSdk 34
+        applicationId "com.example.yourapp" // Change this to your own application ID
+        minSdkVersion 21 // Adjust as needed
+        targetSdkVersion 33 // Adjust to your needs
         versionCode 1
         versionName "1.0"
     }
 
-    buildToolsVersion "34.0.0" // Ensure this matches the latest version
+    // Java compatibility options
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_23
+        targetCompatibility JavaVersion.VERSION_23
+    }
+
+    kotlinOptions {
+        jvmTarget = "23" // Match with your Java version
+    }
 
     buildTypes {
         release {
@@ -81,8 +122,7 @@ android {
 }
 
 dependencies {
-    implementation "androidx.core:core-ktx:1.12.0"
-    implementation "androidx.appcompat:appcompat:1.6.1"
-    implementation "com.google.android.material:material:1.11.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.22" // Match with your Kotlin version
+    // Add your other dependencies here
 }
 
