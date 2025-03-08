@@ -47,3 +47,4 @@
 build/
 *.apk
 *.ipa
+.bitrise.secrets.yml
