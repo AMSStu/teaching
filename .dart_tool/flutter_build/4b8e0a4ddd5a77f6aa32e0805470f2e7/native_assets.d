@@ -1,1 +1,0 @@
- /Users/user/Documents/AMSProjects/ourshop/teaching/.dart_tool/flutter_build/4b8e0a4ddd5a77f6aa32e0805470f2e7/native_assets.yaml: 
