@@ -49,7 +49,14 @@
 // }
 
 
+
 // Root-level build.gradle file
+
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2' // Use latest stable AGP version
+    }
+}
 
 allprojects {
     repositories {
@@ -60,22 +67,15 @@ allprojects {
 
 rootProject.buildDir = "../build"
 
-// Set the build directory for all subprojects
+// Set build directory for all subprojects
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
     project.evaluationDependsOn(":app")
-
-    // Configure android settings for subprojects (without afterEvaluate)
-    if (project.hasProperty("android")) {
-        project.android {
-            compileSdkVersion 34 // Adjust based on your target
-            buildToolsVersion "34.0.0" // Ensure this is updated
-        }
-    }
 }
 
-// Task to clean the build directory
+// Clean task
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+
 
