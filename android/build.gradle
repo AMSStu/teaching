@@ -126,21 +126,52 @@
 
 
 plugins {
-    id 'com.android.application' version '8.2.2' apply false // Add the plugin version here
-    id 'org.jetbrains.kotlin.android' version '1.8.22' apply false
+    id 'com.android.application'
+    id 'kotlin-android' // This is needed if you are using Kotlin
 }
 
-// Using the new streamlined method for setting build directories
-rootProject.buildDir = "../build"
+android {
+    compileSdkVersion 33 // Adjust to the latest version as appropriate
 
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-    project.evaluationDependsOn(":app")
+    defaultConfig {
+        applicationId "com.example.yourapp" // Change as per your app ID
+        minSdkVersion 21 // Adjust according to needs
+        targetSdkVersion 33 // Match your compileSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false // Set to `true` if using ProGuard
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // Custom debug configurations can go here if needed
+        }
+    }
+
+    // If you're using Java 8 features
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8' // Match with the version you are using
+    }
 }
 
-// Clean task
-tasks.register("clean", Delete)  {
-    delete rootProject.buildDir
+dependencies {
+    implementation 'androidx.core:core-ktx:1.10.0' // Update to latest stable dependencies
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.10.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // Add other dependencies as needed
 }
    
 
