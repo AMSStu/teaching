@@ -41,19 +41,19 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
-}
 
-
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
+    // ✅ Move `dependencyResolutionManagement {}` inside `pluginManagement {}` to fix the error
+    dependencyResolutionManagement {
+        repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+        repositories {
+            google()
+            mavenCentral()
+            gradlePluginPortal()
+        }
     }
 }
 
-
+// ✅ `plugins {}` comes immediately after `pluginManagement {}`
 plugins {
     id "dev.flutter.flutter-plugin-loader" version "1.0.0"
     id "com.android.application" version "8.1.0" apply false
@@ -61,5 +61,6 @@ plugins {
 }
 
 include ":app"
+
 
 
