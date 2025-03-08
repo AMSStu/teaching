@@ -104,25 +104,68 @@
 // }
 
 
+// plugins {
+//     id 'com.android.application' version '8.2.2' apply false // Add the plugin version here
+//     id 'org.jetbrains.kotlin.android' version '1.8.22' apply false
+// }
+
+// // Remove `buildscript` as previously discussed
+// rootProject.buildDir = "../build"
+
+// // Set build directory for all subprojects
+// subprojects {
+//     project.buildDir = "${rootProject.buildDir}/${project.name}"
+//     project.evaluationDependsOn(":app")
+// }
+
+// // Clean task
+// tasks.register("clean", Delete) {
+//     delete rootProject.buildDir
+// }
+
+
+
 plugins {
-    id 'com.android.application' version '8.2.2' apply false // Add the plugin version here
-    id 'org.jetbrains.kotlin.android' version '1.8.22' apply false
+    id 'com.android.application'
+    id 'kotlin-android'
 }
 
-// Remove `buildscript` as previously discussed
-rootProject.buildDir = "../build"
+android {
+    compileSdkVersion 33 // Set this to the latest stable version you want to use
+    defaultConfig {
+        applicationId "com.example.yourapp" // Update with your app ID
+        minSdkVersion 21 // Set to the minimum SDK version you want to support
+        targetSdkVersion 33 // Set to the latest stable version you want to target
+        versionCode 1
+        versionName "1.0"
+    }
 
-// Set build directory for all subprojects
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-    project.evaluationDependsOn(":app")
+    // Specify Java version compatibility
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_23
+        targetCompatibility JavaVersion.VERSION_23
+    }
+    kotlinOptions {
+        jvmTarget = "23" // Also ensure Kotlin is targeting Java 23
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        pickFirst '**/*.so' // You can customize this as needed
+    }
 }
 
-// Clean task
-tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.22" // Make sure to match with your Kotlin version
+    // Add your other dependencies here
 }
 
-
+// Note: Remove any repositories block if you already have one in your build.gradle located at android level.
 
 
