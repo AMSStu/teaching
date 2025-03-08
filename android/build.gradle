@@ -139,7 +139,9 @@ subprojects {
 }
 
 // Clean task
-tasks.register("clean", Delete) {
+tasks.register("clean", Delete)  {
+    delete rootProject.buildDir
+}
    
 
 // Note: Remove any repositories block if you already have one in your build.gradle located at android level.
