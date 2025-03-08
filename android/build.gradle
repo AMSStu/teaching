@@ -124,56 +124,23 @@
 // }
 
 
-
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android' // This is needed if you are using Kotlin
-}
-
-android {
-    compileSdkVersion 33 // Adjust to the latest version as appropriate
-
-    defaultConfig {
-        applicationId "com.example.yourapp" // Change as per your app ID
-        minSdkVersion 21 // Adjust according to needs
-        targetSdkVersion 33 // Match your compileSdkVersion
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
     }
-
-    buildTypes {
-        release {
-            minifyEnabled false // Set to `true` if using ProGuard
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            // Custom debug configurations can go here if needed
-        }
-    }
-
-    // If you're using Java 8 features
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = '1.8' // Match with the version you are using
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.2.2" // or whatever the latest version is
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22" // Adjust as necessary
     }
 }
 
-dependencies {
-    implementation 'androidx.core:core-ktx:1.10.0' // Update to latest stable dependencies
-    implementation 'androidx.appcompat:appcompat:1.6.0'
-    implementation 'com.google.android.material:material:1.10.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    // Add other dependencies as needed
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
-   
 
 // Note: Remove any repositories block if you already have one in your build.gradle located at android level.
 
