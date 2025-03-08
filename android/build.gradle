@@ -84,8 +84,12 @@
 
 // Root-level build.gradle file
 
-// REMOVE `buildscript {}` entirely as repositories are handled in settings.gradle
+plugins {
+    id 'com.android.application' version '8.2.2' apply false // Add the plugin version here
+    id 'org.jetbrains.kotlin.android' version '1.8.22' apply false
+}
 
+// Remove `buildscript` as previously discussed
 rootProject.buildDir = "../build"
 
 // Set build directory for all subprojects
@@ -98,6 +102,7 @@ subprojects {
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+
 
 
 
