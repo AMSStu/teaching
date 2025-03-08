@@ -84,7 +84,7 @@
 // Root-level build.gradle file
 
 buildscript {
-    repositories {  // ✅ Add this block to resolve dependencies
+    repositories {  
         google()
         mavenCentral()
         gradlePluginPortal()
