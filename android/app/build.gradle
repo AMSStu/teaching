@@ -88,18 +88,21 @@
 
 
 
+
+
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
 
 android {
-    compileSdkVersion 33
+    namespace "com.ams.co.ltd" // Add this line
+    compileSdk 34 // Ensure consistency
 
     defaultConfig {
-        applicationId "com.example.yourapp"
+        applicationId "com.ams.co.ltd"
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
     }
@@ -130,4 +133,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
+
 
