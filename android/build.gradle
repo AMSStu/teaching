@@ -125,23 +125,24 @@
 
 
 
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
-
-android {
-    namespace "com.ams.co.ltd" // Add this line
-    compileSdk 34
-
-    defaultConfig {
-        applicationId "com.ams.co.ltd"
-        minSdk 21
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.2.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22"
     }
 }
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 
 
 
