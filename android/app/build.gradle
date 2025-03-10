@@ -90,17 +90,18 @@
 
 
 
+// app-level build.gradle
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
 
 android {
-    namespace "com.ams.co.ltd" // Add this line
-    compileSdk 34 // Ensure consistency
+    namespace "com.ams.co.ltd"  // Update the namespace if necessary
+    compileSdk 34  // Ensure consistency with the latest SDK
 
     defaultConfig {
-        applicationId "com.ams.co.ltd"
+        applicationId "com.ams.co.ltd"  // Update your application ID
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
@@ -125,7 +126,7 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.22"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"  // Update Kotlin version
     implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.10.0'
