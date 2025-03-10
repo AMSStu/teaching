@@ -90,18 +90,60 @@
 
 
 
-// app-level build.gradle
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
+// // app-level build.gradle
+// plugins {
+//     id 'com.android.application'
+//     id 'kotlin-android'
+// }
+
+// android {
+//     namespace "com.ams.co.ltd"  // Update the namespace if necessary
+//     compileSdk 34  // Ensure consistency with the latest SDK
+
+//     defaultConfig {
+//         applicationId "com.ams.co.ltd.teaching"  // Update your application ID
+//         minSdkVersion 21
+//         targetSdkVersion 34
+//         versionCode 1
+//         versionName "1.0"
+//     }
+
+//     compileOptions {
+//         sourceCompatibility JavaVersion.VERSION_1_8
+//         targetCompatibility JavaVersion.VERSION_1_8
+//     }
+
+//     kotlinOptions {
+//         jvmTarget = "1.8"
+//     }
+
+//     buildTypes {
+//         release {
+//             minifyEnabled true
+//             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//         }
+//     }
+    
+// }
+
+// dependencies {
+//     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"  // Update Kotlin version
+//     implementation 'androidx.core:core-ktx:1.10.0'
+//     implementation 'androidx.appcompat:appcompat:1.6.0'
+//     implementation 'com.google.android.material:material:1.10.0'
+//     testImplementation 'junit:junit:4.13.2'
+//     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+//     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+// }
+
+
 
 android {
-    namespace "com.ams.co.ltd"  // Update the namespace if necessary
-    compileSdk 34  // Ensure consistency with the latest SDK
+    namespace "com.ams.co.ltd"  // Ensure this is correct
+    compileSdk 34
 
     defaultConfig {
-        applicationId "com.ams.co.ltd.teaching"  // Update your application ID
+        applicationId "com.ams.co.ltd.teaching"  // This should match your package name
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
@@ -119,21 +161,22 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"  // Update Kotlin version
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"
     implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.10.0'
+    implementation 'io.flutter:flutter_embedding:1.0.0' // Make sure this is included
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
+
 
 
