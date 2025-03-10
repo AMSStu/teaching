@@ -101,7 +101,7 @@ android {
     compileSdk 34  // Ensure consistency with the latest SDK
 
     defaultConfig {
-        applicationId "com.ams.co.ltd"  // Update your application ID
+        applicationId "com.ams.co.ltd.teaching"  // Update your application ID
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
