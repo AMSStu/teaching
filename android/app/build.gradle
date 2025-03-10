@@ -175,7 +175,6 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.10.0'  // Core KTX extension
     implementation 'androidx.appcompat:appcompat:1.6.0'  // AppCompat for backward compatibility
     implementation 'com.google.android.material:material:1.10.0'  // Material Design components
-    implementation 'io.flutter:flutter_embedding:1.0.0'  // Flutter embedding (make sure this is included)
     
     // Testing dependencies
     testImplementation 'junit:junit:4.13.2'
