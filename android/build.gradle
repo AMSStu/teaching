@@ -127,7 +127,7 @@
 
 // android/build.gradle (Project-level build.gradle)
 buildscript {
-    ext.kotlin_version = '1.9.0'  // Define Kotlin version
+    ext.kotlin_version = '1.9.22'  // Define Kotlin version
 
     repositories {
         google()
