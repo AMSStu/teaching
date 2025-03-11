@@ -138,12 +138,12 @@
 
 
 // android/app/build.gradle (App-level build.gradle)
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
+// apply plugin: 'com.android.application'
+// apply plugin: 'kotlin-android'
 
-android {
-    namespace "com.ams.co.ltd"
-    compileSdk 34
+// android {
+//     namespace "com.ams.co.ltd"
+    // compileSdk 34
 //     defaultConfig {
 //         applicationId "com.ams.co.ltd.teaching"
 //         minSdkVersion 21
