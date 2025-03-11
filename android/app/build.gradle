@@ -142,41 +142,41 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace "com.ams.co.ltd"  // Correct namespace for your app
-    compileSdk 34  // Set to the latest compile SDK version
-
+    namespace "com.ams.co.ltd"
+    compileSdk 34
     defaultConfig {
-        applicationId "com.ams.co.ltd.teaching"  // Ensure this matches your app's package name
-        minSdkVersion 21  // Minimum SDK version for your app
-        targetSdkVersion 34  // Target SDK version for your app
-        versionCode 1  // Increment this on each release
-        versionName "1.0"  // Your app's version name
+        applicationId "com.ams.co.ltd.teaching"
+        minSdkVersion 21
+        targetSdkVersion 34 // Updated
+        coreLibraryDesugaringEnabled true
+        versionCode 1
+        versionName "1.0"
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8  // Java 8 compatibility
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11 // Updated
+        targetCompatibility JavaVersion.VERSION_11 // Updated
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"  // Kotlin JVM target version
+        jvmTarget = "11" // Updated
     }
 
     buildTypes {
         release {
-            minifyEnabled false  // Disable code minification (for now)
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'  // Adjust if needed
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"  // Kotlin standard library
-    implementation 'androidx.core:core-ktx:1.10.0'  // Core KTX extension
-    implementation 'androidx.appcompat:appcompat:1.6.0'  // AppCompat for backward compatibility
-    implementation 'com.google.android.material:material:1.10.0'  // Material Design components
-    
-    // Testing dependencies
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"
+    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.10.0'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3' // Added
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
